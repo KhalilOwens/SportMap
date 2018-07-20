@@ -42,15 +42,6 @@ var sess = {
 
   cookie: {}
 }
-//app.set('view engine', '');
-
-// app.use(passport.initialize());
-// app.use(passport.session()); // persistent login sessions
-// app.use(flash()); // use connect-flash for flash messages stored in session
-
-
-
-
 
  
 if (app.get('env') === 'production') {
@@ -60,19 +51,6 @@ if (app.get('env') === 'production') {
  
 app.use(session(sess));
 
-// app.use(passport.initialize());
-// app.use(passport.session());
-
-// passport.use(new LocalStrategy(
-//   function(username, password, done) {
-//     User.findOne({ username: username }, function (err, user) {
-//       if (err) { return done(err); }
-//       if (!user) { return done(null, false); }
-//       if (!user.verifyPassword(password)) { return done(null, false); }
-//       return done(null, user);
-//     });
-//   }
-// ));
 
 app.use(flash());
 

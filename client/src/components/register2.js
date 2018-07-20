@@ -97,6 +97,7 @@ export default class RegisterNext extends Component {
     }).catch(err => {
         console.log(err.response)
     })
+    window.location.href = '/Main'    
 }
 
 render() {
@@ -107,27 +108,16 @@ render() {
 <h3> Register </h3> 
 <br/>
 <form onSubmit={this.handleSubmit} action="">
+<FormGroup controlId="experience" >
+<ControlLabel>Experience</ControlLabel>
 <FormControl 
         value={this.state.experience}
         onChange={this.handleChange}
         style={textarea.panel}
         placeholder="League?"
         />
-        <FormGroup controlId="experience" >
-        <ControlLabel>Experience</ControlLabel>
-        <select value={this.state.value} onChange={this.handleChange}>
-            <option value="grapefruit">Grapefruit</option>
-            <option value="lime">Lime</option>
-            <option value="coconut">Coconut</option>
-            <option value="mango">Mango</option>
-          </select>
-<FormControl 
-        value={this.state.experience}
-        onChange={this.handleChange}
-        type="options"
-        style={textarea.panel}
-        placeholder="Highest Level of Experience"
-        />
+        
+
         </FormGroup>        
         <FormGroup controlId="improvements" >
         <ControlLabel>Improvements</ControlLabel>
@@ -159,7 +149,7 @@ render() {
         placeholder="Enter password"
         />
         </FormGroup>
-        <FormGroup controlId="ConfirmPassword" >
+        <FormGroup controlId="password2" >
         <ControlLabel>Confirm Password</ControlLabel>
 <FormControl 
         value={this.state.password2}
@@ -191,4 +181,3 @@ render() {
 }; 
     
 }
-

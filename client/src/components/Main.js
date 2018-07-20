@@ -110,7 +110,7 @@ export default class Main extends Component {
         <div className="row">
        
         <div className="col-lg-5">
-          Blacktop Rankings   <img alt="rank" style={Top.Rank} src={Ranking} />
+         Rankings   <img alt="rank" style={Top.Rank} src={Ranking} />
         </div>
 
         <div className="col-lg-5">

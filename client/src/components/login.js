@@ -114,7 +114,7 @@ export default class Login extends Component {
             bsSize="large"
             disabled={!this.validateForm()}
             type="submit"
-            href="/Map"
+            href="/Main"
           >
             Login
                 </Button>
