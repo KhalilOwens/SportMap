@@ -91,9 +91,10 @@ export default class Register extends Component {
     console.log(data);
     // use axios post to /users/register with the form data
     axios.post('/users/register', data).then(function (response) {
+      window.location.href = '/register2';
       console.log(response);
       sessionStorage.setItem('userId', response.data._id);
-      window.location.href = '/register2';
+     // window.location.href = '/register2';
 
 
     }).catch(err => {
@@ -133,13 +134,13 @@ export default class Register extends Component {
 
           <FormGroup controlId="age" >
             <ControlLabel>Age</ControlLabel>
-            <FormControl
+           <FormControl
               value={this.state.age}
               onChange={this.handleChange}
               type="age"
               style={textarea.panel}
               placeholder="Enter Age"
-            />
+            /> 
           </FormGroup>
           <FormGroup controlId="location" >
             <ControlLabel>Location</ControlLabel>
@@ -161,12 +162,12 @@ export default class Register extends Component {
               placeholder="Enter Height"
             />
           </FormGroup>
-
           <Button
             block 
             bsSize="large"
             onClick={this.handleFormSubmit}
             disabled={!this.validateForm()}
+
             type="button" >
 Next          </Button>
           

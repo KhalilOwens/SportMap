@@ -5,7 +5,7 @@ import "./login.css";
 import axios from "axios";
 //import home from "./home";
 
-
+// App for connecting amatuer games and events
 const styles= {
     panel: {
         backgroundColor: "rgba(0,0,0,0.5)",
